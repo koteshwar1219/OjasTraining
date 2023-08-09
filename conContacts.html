@@ -1,0 +1,32 @@
+<template>
+    
+    <lightning-card title="conContacts" icon-name="Standard:Account">
+       
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Current LPA</th>
+                        <th>Hike</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            
+   <tbody>
+    <template for:each={Contacts} for:item="ConDetail">
+        <tr key={ConDetail.Id}>
+            <td>{ConDetail.Name}</td>
+            <td>{ConDetail.Age}</td>
+            <td>{ConDetail.CurrentLPA}</td>
+            <td>{ConDetail.Hike}</td>
+            <td>
+                <lightning-button label="Hike" onclick={ShowHike}></lightning-button>
+            </td>
+        </tr>
+        
+    </template>
+   </tbody>
+</table>
+    </lightning-card>
+</template>
